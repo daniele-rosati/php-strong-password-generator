@@ -13,7 +13,7 @@ for ($i=0; $i < 10 ; $i++) {
 
     $rndomNum = (string) rand(0, 9);
     // $password = $password . $rndomNum;
-    $letter = chr(rand(33,126));
+    $letter = chr(rand(33,126)); // chr(rand(33,126)) = include numeri,lettere e caratteri speciali
     $password = $password . $letter . $rndomNum;
 
 };
