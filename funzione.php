@@ -1,6 +1,6 @@
 <?php
 
-function GeneratorePassword($Passwordleght, $numeri, $lettere_M, $lettere_m, $simboli){
+function GeneratorePassword($Passwordleght, $numeri, $lettere_Maiuscole, $lettere_minuscole, $simboli){
 
     
     $password = "";
@@ -19,11 +19,11 @@ function GeneratorePassword($Passwordleght, $numeri, $lettere_M, $lettere_m, $si
             $password = $password .  $rndomNum;
         }
 
-        if($lettere_M === 'on'){
+        if($lettere_Maiuscole === 'on'){
             $password = $password . $rndomLETTERE;
         }
         
-        if($lettere_m === 'on'){
+        if($lettere_minuscole === 'on'){
             $password = $password . $rndomlettere;
         }
 
@@ -31,11 +31,11 @@ function GeneratorePassword($Passwordleght, $numeri, $lettere_M, $lettere_m, $si
             $password = $password . $rndomsimboli;
         }
 
-        if($numeri !== 'on' && $lettere_M !== 'on' && $lettere_m !== 'on' && $simboli !== 'on'){
+        if($numeri !== 'on' && $lettere_Maiuscole !== 'on' && $lettere_minuscole !== 'on' && $simboli !== 'on'){
             echo "Seleziona almeno una checkbox";
         }
 
-        
+
         echo $password; 
     };
     
