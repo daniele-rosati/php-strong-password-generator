@@ -1,7 +1,8 @@
 <?php
 
 function GeneratorePassword($Passwordleght, $numeri, $lettere_Maiuscole, $lettere_minuscole, $simboli){
-
+    
+    // $Passwordleght = 5; 
     
     $password = "";
 
@@ -33,10 +34,12 @@ function GeneratorePassword($Passwordleght, $numeri, $lettere_Maiuscole, $letter
         
         // se nel caso l'utente decida di non selezionare nessuna opzione allora mando un messaggio di alert dove specifico che almeno un opzione deve essere selezionata
         if($numeri !== 'on' && $lettere_Maiuscole !== 'on' && $lettere_minuscole !== 'on' && $simboli !== 'on'){
-            echo "Seleziona almeno una checkbox";
+            echo "Seleziona almeno una checkbox " ;
+        }else{ 
+           echo $password;  
         }
 
-        echo $password; 
+        
     };
     
    
