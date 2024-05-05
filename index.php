@@ -6,7 +6,7 @@
     <title>Password Generator</title>
 </head>
 <body>
-
+        <!-- form contenete le varie laber con password, numeri, Maiuscole, minuscole -->
     <form>
             <label for="password"> password </label>
             <input type="textbox" name="password" id="password">
@@ -41,21 +41,22 @@
 
     </form>
 
+    <!-- c'è qualcosa che mi da errore ogni tanto nelle laber -->
 
     <?php
     include "./funzione.php"; 
-
+    // prendo i vari 'dati' dai vari array 
     $Passwordleght = $_GET["password"];
 
     $numeri = $_GET["numeri"];
-    $lettere_Maiuscole = $_GET["lettere_M"];
-    $lettere_minuscole = $_GET["lettere_m"];
+    $lettere_Maiuscole = $_GET["lettere_Maiuscole"];
+    $lettere_minuscole = $_GET["lettere_minuscole"];
     $simboli = $_GET["simboli"];
 
     // $password = $password . $letter . $rndomNum;
 
-    GeneratorePassword($Passwordleght, $numeri, $lettere_Maiuscole, $lettere_minuscole, $simboli);
-
+    GeneratorePassword($Passwordleght, $numeri, $lettere_Maiuscole, $lettere_minuscole, $simboli); 
+    // se per caso sbaglio a non inserire un campo mi genera in maniera infinata "Seleziona almeno una checkbox" e si impalla la pagina, è un problema greve
     ?>
 
 </body>
