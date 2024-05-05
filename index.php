@@ -14,7 +14,6 @@ for ($i=0; $i < 10 ; $i++) {
     $rndomNum = (string) rand(0, 9);
     // $password = $password . $rndomNum;
     $letter = chr(rand(33,126));
-
     $password = $password . $letter . $rndomNum;
 
 };
